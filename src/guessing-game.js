@@ -41,7 +41,7 @@ class GuessingGame {
             this.root.left = this.current;
 
             // console.log(this.root);
-            console.log(this.current);
+            // console.log(this.current);
 
             return this.current;
         }
@@ -65,13 +65,16 @@ class GuessingGame {
             // console.log(this.range)
         }
 
-    	// current.left = newNode;
     }
-// здесь остановился, возможно неправильно
+// здесь остановился, возможно неправильно:
     greater() {
         this.root.right = this.current;
         let min = this.current.value;
-        let max = this.root.value;
+        //здесь нужно не root, а как-то указать на узел выше:
+        let max = this.root.value;            
+        console.log(this.current.value);
+        console.log(this.root.value);
+
         this.range = max - min;
     }
 }
